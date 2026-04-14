@@ -11,7 +11,7 @@ This project expects:
 - **v2 chat** to be deployed
 - the **Go chat backend** to be running
 
-It is **not** aimed at older deployments that still use the legacy Node.js backend, and compatibility with those setups is not guaranteed.
+It is **not** aimed at older deployments, and current live chat backend that still use the legacy Node.js backend, and compatibility with those setups is not guaranteed.
 
 ## Notes
 
