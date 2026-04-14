@@ -1,24 +1,52 @@
-name: Go
-on: [push, pull_request]
-jobs:
+# name: Go
+# on: [push, pull_request]
+# jobs:
+#
+#   build:
+#     name: Build
+#     runs-on: ubuntu-latest
+#     steps:
+#
+#     - name: Set up Go 1.15
+#       uses: actions/setup-go@v1
+#       with:
+#         go-version: 1.15
+#       id: go
+#
+#     - name: Check out code into the Go module directory
+#       uses: actions/checkout@v1
+#
+#     - name: Get dependencies
+#       run: |
+#         go get -v -t -d ./...
+#
+#     - name: Build
+#       run: go build -v .
 
+
+name: Go
+
+on:
+  push:
+  pull_request:
+
+jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+
     steps:
+      - name: Check out code
+        uses: actions/checkout@v4
 
-    - name: Set up Go 1.15
-      uses: actions/setup-go@v1
-      with:
-        go-version: 1.15
-      id: go
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: '1.15'
+          cache: true
 
-    - name: Check out code into the Go module directory
-      uses: actions/checkout@v1
+      - name: Get dependencies
+        run: go mod download
 
-    - name: Get dependencies
-      run: |
-        go get -v -t -d ./...
-
-    - name: Build
-      run: go build -v .
+      - name: Build
+        run: go build -v .

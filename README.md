@@ -4,6 +4,8 @@ A fork of [tsgg](https://github.com/strims/tsgg), the terminal client for Strims
 
 This fork targets my current chat stack and is built around the **v2 chat deployment**, which uses the **Go backend** rather than the older Node.js backend.
 
+> This is a fork of `tsgg` and requires a deployed **v2 chat** stack using the **Go backend**. It does not target the older Node.js chat backend.
+
 ## Compatibility
 
 This project expects:
