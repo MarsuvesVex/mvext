@@ -1,4 +1,4 @@
-# github-marsuvesvex
+# mvext
 
 A fork of [tsgg](https://github.com/strims/tsgg), the terminal client for Strims.gg.
 
